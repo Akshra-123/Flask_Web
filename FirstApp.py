@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask , render_template
 
 app = Flask(__name__)
 
@@ -9,5 +9,9 @@ def hello():
 @app.route("/webpage")
 def webpage():
     return "Hello guys!! It's my first flask web page 2"
+
+@app.route("/index")
+def index():
+    return render_template('index.html')
 
 app.run(debug=True)
