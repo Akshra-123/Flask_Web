@@ -14,4 +14,9 @@ def webpage():
 def index():
     return render_template('index.html')
 
+@app.route("/name")
+def name():
+    name="Akshra"
+    return render_template('new.html',name=name)
+
 app.run(debug=True)
